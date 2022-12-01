@@ -3,15 +3,7 @@ export function sum(nums: Array<number>) {
 }
 
 export function max(nums: Array<number>) {
-	let max = 0;
-
-	for (const num of nums) {
-		if (num > max) {
-			max = num;
-		}
-	}
-
-	return max;
+	return nums.reduce((max, cur) => cur > max ? cur : max);
 }
 
 export function nLargest(nums: Array<number>, n: number) {
