@@ -2,9 +2,9 @@ import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 import part1 from "./01.ts";
 
 Deno.test(
-  "should return the maximum number of calories that a given elf is carrying",
-  () => {
-    const input = `1000
+	"should return the maximum number of calories that a given elf is carrying",
+	() => {
+		const input = `1000
 2000
 3000
 
@@ -19,6 +19,6 @@ Deno.test(
 
 10000`;
 
-    assertEquals(part1(input), 24000);
-  }
+		assertEquals(part1(input), 24000);
+	},
 );
