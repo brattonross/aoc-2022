@@ -1,5 +1,7 @@
+import { splitNewLines } from "../shared/text.ts";
+
 export function parseElves(input: string) {
-	const lines = input.split(/\r?\n/);
+	const lines = splitNewLines(input);
 	const elves: Array<Array<number>> = [];
 	let elf: Array<number> = [];
 
