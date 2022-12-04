@@ -3,8 +3,5 @@ function parseRange(range: string) {
 }
 
 export function parseRanges(line: string) {
-	const [first, second] = line.split(",");
-	const firstRange = parseRange(first);
-	const secondRange = parseRange(second);
-	return [firstRange, secondRange];
+	return line.split(",").map(parseRange);
 }
