@@ -1,5 +1,5 @@
 import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
-import { max, nLargest, sum } from "./math.ts";
+import { max, nLargest, sum, sumBy } from "./math.ts";
 
 Deno.test("max", async (t) => {
 	await t.step("should return the largest number in the array", () => {
@@ -17,4 +17,14 @@ Deno.test("sum", async (t) => {
 	await t.step("should return the sum of given numbers", () => {
 		assertEquals(sum([1, 2, 3]), 6);
 	});
+});
+
+Deno.test("sumBy", async (t) => {
+	await t.step(
+		"should return the sum of values returned from the given function",
+		() => {
+			const objects = [{ "n": 4 }, { "n": 2 }, { "n": 8 }, { n: 6 }];
+			assertEquals(sumBy(objects, (o) => o.n), 20);
+		},
+	);
 });
