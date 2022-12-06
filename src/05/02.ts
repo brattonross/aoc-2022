@@ -1,6 +1,6 @@
 import { parse } from "./shared.ts";
 
-export default function part1(input: string) {
+export default function part2(input: string) {
 	const { crates, moves } = parse(input);
 
 	for (const [amount, from, to] of moves) {
@@ -10,7 +10,7 @@ export default function part1(input: string) {
 		const cratesToMove = crates[fromIndex].splice(
 			crates[fromIndex].length - amount,
 		);
-		crates[toIndex].push(...cratesToMove.reverse());
+		crates[toIndex].push(...cratesToMove);
 	}
 
 	return crates.reduce((message, crate) => message + crate.at(-1), "");
