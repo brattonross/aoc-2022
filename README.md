@@ -10,3 +10,11 @@ Run a particular day with the `run.ts` script:
 ```bash
 deno run --allow-read ./run.ts 01
 ```
+
+## Running tests
+
+Use deno to run tests:
+
+```bash
+deno test src --parallel
+```
