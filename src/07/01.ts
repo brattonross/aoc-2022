@@ -4,27 +4,27 @@ import { buildTree, totalSize, TreeNode } from "./shared.ts";
 const maxSize = 100_000;
 
 export default function part1(input: string) {
-  const lines = splitNewLines(input);
-  const tree = buildTree(lines);
+	const lines = splitNewLines(input);
+	const tree = buildTree(lines);
 
-  let total = 0;
+	let total = 0;
 
-  function processNode(node: TreeNode) {
-    if (node.type === "file") {
-      return;
-    }
+	function processNode(node: TreeNode) {
+		if (node.type === "file") {
+			return;
+		}
 
-    const size = totalSize(node);
-    if (size <= maxSize) {
-      total += size;
-    }
+		const size = totalSize(node);
+		if (size <= maxSize) {
+			total += size;
+		}
 
-    for (const child of node.children) {
-      processNode(child);
-    }
-  }
+		for (const child of node.children) {
+			processNode(child);
+		}
+	}
 
-  processNode(tree);
+	processNode(tree);
 
-  return total;
+	return total;
 }

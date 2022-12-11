@@ -1,16 +1,16 @@
 {
-  "$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
-  "compilerOptions": {
-    "strict": true
-  },
-  "fmt": {
-    "options": {
-      "useTabs": true
-    }
-  },
-  "lint": {
-    "rules": {
-      "exclude": ["no-explicit-any"]
-    }
-  }
+	"$schema": "https://deno.land/x/deno/cli/schemas/config-file.v1.json",
+	"compilerOptions": {
+		"strict": true
+	},
+	"fmt": {
+		"options": {
+			"useTabs": true
+		}
+	},
+	"lint": {
+		"rules": {
+			"exclude": ["no-explicit-any"]
+		}
+	}
 }
