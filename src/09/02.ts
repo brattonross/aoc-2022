@@ -1,6 +1,6 @@
 import { numPositionsTouchedByTail, parseMoves } from "./shared.ts";
 
-export default function part1(input: string) {
+export default function part2(input: string) {
   const moves = parseMoves(input);
-  return numPositionsTouchedByTail(moves);
+  return numPositionsTouchedByTail(moves, 10);
 }
