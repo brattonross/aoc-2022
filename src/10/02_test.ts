@@ -1,8 +1,8 @@
 import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
-import part1 from "./01.ts";
+import part2 from "./02.ts";
 
 Deno.test(
-	"should return the sum of the six signal strengths",
+	"should return a representation of the positions that the sprite is drawn at",
 	() => {
 		const input = `addx 15
 addx -11
@@ -151,6 +151,14 @@ noop
 noop
 noop`;
 
-		assertEquals(part1(input), 13140);
+		assertEquals(
+			part2(input),
+			`##..##..##..##..##..##..##..##..##..##..
+###...###...###...###...###...###...###.
+####....####....####....####....####....
+#####.....#####.....#####.....#####.....
+######......######......######......####
+#######.......#######.......#######.....`,
+		);
 	},
 );
