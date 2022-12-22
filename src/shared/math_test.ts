@@ -1,5 +1,20 @@
 import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
-import { max, nLargest, sum, sumBy } from "./math.ts";
+import {
+	greatestCommonDivisor,
+	leastCommonMultiple,
+	max,
+	nLargest,
+	sum,
+	sumBy,
+} from "./math.ts";
+
+Deno.test("greatestCommonDivisor", () => {
+	assertEquals(greatestCommonDivisor(8, 12), 4);
+});
+
+Deno.test("leastCommonMultiple", () => {
+	assertEquals(leastCommonMultiple(8, 9, 21), 504);
+});
 
 Deno.test("max", async (t) => {
 	await t.step("should return the largest number in the array", () => {
